@@ -1,0 +1,62 @@
+My world is a configuration
+Host is nothing
+Port is 22
+User is nothing
+Wordlist is nothing
+Threads are 4
+Timeout is 10
+
+Listen to your heart
+Shout "Starting SSH brute force"
+Shout "Host: " + Host
+Shout "Port: " + Port
+Shout "User: " + User
+Shout "Threads: " + Threads
+Shout "Timeout: " + Timeout
+
+My world is a wordlist file
+Open wordlist file at Wordlist
+My world is the passwords
+Build the passwords up
+
+While wordlist file is not empty
+  Read a line from wordlist file
+  Put the line into the passwords
+  Shout "Loaded " + the passwords + " passwords"
+
+My world is a result
+The result is nothing
+
+My world is the workers
+Build the workers up
+
+While the workers are less than Threads
+  Create a worker called the workers
+  The worker's mission is to try passwords
+  Increment the workers
+
+Listen to your heart
+If the result is not nothing
+  Shout the result
+  Break it down
+
+Shout "No valid credentials found"
+
+The mission to try passwords is
+  My world is a password
+  While the passwords are not empty
+    Take a password from the passwords
+    If the password is right
+      Put "[SUCCESS] " + User + ":" + password into the result
+      Break it down
+    Wait
+
+Is the password right?
+  My world is a socket
+  Build the socket up
+  Try to open the socket
+  If the socket is open
+    Close the socket
+    Give back yes
+  Else
+    Give back no
